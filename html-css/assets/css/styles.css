@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    background-color: #f14807;
+    background-image: url(../images/background-adare-restaurant.jpg);
+    background-size: cover;
+    
+}
+/* ---- Container ----*/
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+/* ---- Header ----*/
+
+.container .header{
+    text-align: center;
+    height: 20vh;
+}
+
+/* ---- Img Logo ----*/
+
+.container .header .img-container{
+    height: 20vh;
+}
+
+.container .header .img-container .img-logo{
+    height: 15vh;
+}
+
+/* ---- Navbar ----*/
+
+.container .header .navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.container .header .navbar .nav-item{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+.container .header .navbar .nav-item:hover{
+    color: #f14807;
+    font-size: 1.5em;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* ---- Main ----*/
+
+.container .main-container{
+    text-align: center;
+    margin-top: 10vh;
+
+}
+
+.container .main-container .main-text-container{
+    color: white;
+    padding-top: 4rem;
+}
+.container .main-container .main-text-container h1{
+    font-family: "Rubik", sans-serif;
+    font-size: 5em;
+    transition: 0.3s;
+}
+.container .main-container .main-text-container h1:hover{
+    text-shadow: 0.05em 0.05em #f14807;
+    transition: 0.3s;
+}
+
+.container .main-container .main-text-container article{
+    margin: 0 auto;
+    width: 45vw;
+}
+
+.container .main-container .main-text-container p{
+    color: rgb(177, 176, 176);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+}
+
+.container .main-container .main-text-container p strong a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0.08em 0.08em #f14807;
+}
+
+.container .footer{
+    color: white;
+    text-align: center;
+}
+
+.container .footer h4{
+    font-size: 1.1em;
+}
+
+ @media (min-wdth:768px) and (max-width:992px){
+    .container .header .navbar{   
+        width: 50vw;
+    }
+ }
+
+ @media (min-wdth:530px) and (max-wdth:750px){
+    .container .header .navbar{   
+        width: 75vw;
+    }
+ }
+
+ @media (min-wdth:310px) and (max-wdth:529px){
+    .container .header{
+        margin-left: 9vw;
+    }
+
+    .container .header .img-container{
+        margin-left: 21vw;
+    }
+
+    .container .header .navbar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100vw;
+    }
+ }
