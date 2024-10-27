@@ -1,0 +1,221 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: sans-serif; 
+    margin: 0; 
+}
+
+/* Estilos del contenedor principal */
+.container {
+    margin-left: auto; 
+    margin-right: auto;
+    width: 800px; 
+    margin: auto; 
+    padding: 2vw; 
+    border-radius: 5vw; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos del texto del encabezado */
+.container .header-text {
+    text-align: center; 
+    height: 2 rem; 
+}
+
+/* Estilos de la imagen del encabezado */
+.container .img-header img {
+    width: 59vw; 
+    height: 30vh; 
+    object-fit: cover; 
+}
+
+/* Estilos del contenedor de tarjetas de tiempo */
+.cards-time {
+    display: flex; 
+    justify-content: space-around; 
+}
+
+/* Estilos de cada tarjeta de tiempo */
+.cards-time .card {
+    flex: 1; 
+    margin: 0 .5vw; 
+    padding: 2vw; 
+    border: .15vw solid #ddd;
+    border-radius: .5vw;
+    text-align: center;
+    background-color: rgb(245, 243, 241);
+}
+
+/* Estilos de la sección de ingredientes */
+.Ingredients-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3vw;
+}
+
+.Ingredients-section .title {
+    flex: 0 0 20vw;
+    margin-right: 1vw;
+}
+
+.Ingredients-section .list {
+    flex: 1;
+}
+
+.Ingredients-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Ingredients-section li {
+    margin-bottom: 1vw;
+    position: relative; /* Permite posicionar el círculo absolutamente */
+    padding-left: 3vw; /* Agrega espacio a la izquierda para el círculo */
+}
+
+.Ingredients-section li::before {
+    content: ""; /* Crea un pseudoelemento antes de cada elemento de la lista */
+    position: absolute; /* Posiciona el pseudoelemento absolutamente */
+    left: 0; /* Alinea el círculo a la izquierda */
+    top: 50%; /* Centra verticalmente el círculo */
+    transform: translateY(-50%); /* Ajusta la posición vertical del círculo */
+    width: 15px; /* Establece el ancho del círculo */
+    height: 15px; /* Establece la altura del círculo */
+    border-radius: 50%; /* Hace que el círculo sea redondo */
+    background-color: #918e8e; /* Establece el color de fondo del círculo */
+}
+
+/* Estilos para las secciones de Instructions y Nutrition Facts */
+.Instructions-section, .Nutrition-Facts-section {
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 3vw; 
+}
+
+.Instructions-section .title, .Nutrition-Facts-section .title {
+    flex: 0 0 20vw; 
+    margin-right: 2vw;
+}
+
+.Instructions-section .list, .Nutrition-Facts-section .list {
+    flex: 1;
+}
+
+.Instructions-section ul, .Nutrition-Facts-section ul {
+    list-style: none;
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.Instructions-section li, .Nutrition-Facts-section li {
+    margin-bottom: 1vw;
+    position: relative;
+    padding-left: 3vw;
+}
+
+.Instructions-section li::before, .Nutrition-Facts-section li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+/* Media queries para diferentes dispositivos */
+
+/* Para tablets (aproximadamente entre 768px y 1024px de ancho) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .cards-time {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 20px);
+        margin-bottom: 2vw;
+    }
+    .header-text .img-header img{
+        width: 100vw; 
+        height: 300vh; 
+        object-fit: cover; 
+    }   
+}
+
+/* Media query para dispositivos entre 530px y 750px de ancho */
+@media (min-width: 530px) and (max-width: 750px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .cards-time {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 20px); 
+        margin-bottom: 2vw; 
+    }
+
+    .header-text .img-header img{
+        width: 100vw; 
+        height: 300vh; 
+        object-fit: cover; 
+    }
+}
+
+/* Media query para dispositivos entre 768px y 992px de ancho */
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* Media query para dispositivos entre 310px y 529px de ancho (celulares) */
+@media (min-width: 310px) and (max-width: 529px) {
+    .container {
+        max-width: 100%; 
+        padding: 1vw; 
+    }
+
+    header {
+        flex-direction: column; 
+    }
+
+    .header-text, .img-header{
+        width: 100%; 
+    }
+
+    .header-text .img-header img{
+        width: 100vw; 
+        height: 300vh; 
+        object-fit: cover; 
+    }
+
+    .cards-time {
+        flex-direction: column; 
+    }
+
+    .card {
+        flex: 0 0 100%; 
+        margin-bottom: 1vw;
+    }
+
+    .Ingredients-section, .Instructions-section, .Nutrition-Facts-section {
+        flex-direction: column; 
+    }
+
+    .Ingredients-section .title, 
+    .Instructions-section .title, 
+    .Nutrition-Facts-section .title {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 1vw;
+    }
+}
